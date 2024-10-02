@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/init"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#673AB7"
+            android:text="open"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textColorLink="#FFFFFF" />
+
+        <EditText
+            android:id="@+id/step"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="Step"
+            android:inputType="textPersonName"
+            android:text="15" />
+
+        <EditText
+            android:id="@+id/seed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="Seed"
+            android:inputType="textPersonName"
+            android:text="42" />
+
+        <Button
+            android:id="@+id/txt2img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#40C4FF"
+            android:text="Text"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/img2img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FFAB40"
+            android:text="Image"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/txt2video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Video" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/pos"
+            android:layout_width="255dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Positive Prompt"
+            android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/defaultPositive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#FFD740"
+            android:text="Default" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/neg"
+            android:layout_width="255dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Negative Prompt"
+            android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/defaultNegative"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#FF6E40"
+            android:text="Default" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/resView"
+            android:layout_width="match_parent"
+            android:layout_height="1024px"
+            android:layout_weight="1"
+            android:background="#FFFFFF" />
+
+        <VideoView
+            android:id="@+id/videoView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="-50px" />
+    </FrameLayout>
+
+</LinearLayout>
